@@ -53,7 +53,10 @@ const Join = () => {
               are 23% more confident and 3x more likely to contribute to their
               community.
             </p>
-            <Button href="https://go.girlguiding.org.uk/join-us/join-as-member/">
+            <Button
+              as="a"
+              href="https://go.girlguiding.org.uk/join-us/join-as-member/"
+            >
               Register your daughter
             </Button>
           </Article>
@@ -66,7 +69,10 @@ const Join = () => {
               Help all girls know they can do anything by volunteering with us.
               Make a difference and be part of the guiding community!
             </p>
-            <Button href="https://www.girlguiding.org.uk/link/f1b25a35c49d43768df10777201c3475.aspx">
+            <Button
+              as="a"
+              href="https://www.girlguiding.org.uk/link/f1b25a35c49d43768df10777201c3475.aspx"
+            >
               Register to volunteer
             </Button>
           </Article>

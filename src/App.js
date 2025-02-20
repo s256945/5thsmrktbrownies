@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./components/home.jsx";
 import Join from "./components/joinUs.jsx";
+import Parents from "./components/Parents.jsx";
 import Contact from "./components/contact.jsx";
 
 const App = () => {
@@ -35,6 +36,11 @@ const App = () => {
                 </NavLink>
               </li>
               <li>
+                <Link to="/parents" onClick={toggleMenu}>
+                  👪 Parents
+                </Link>
+              </li>
+              <li>
                 <Link to="#" onClick={toggleMenu}>
                   🎉 Activities
                 </Link>
@@ -50,6 +56,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
+          <Route path="/parents" element={<Parents />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

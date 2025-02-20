@@ -43,7 +43,7 @@ const Home = () => {
         <Overlay>
           <h2>Welcome to our Brownies Unit!</h2>
           <p>Join us for fun, friendship, and adventure!</p>
-          <Button href="/join">Join Now</Button>
+          <Button as="a" href="/join">Join Now</Button>
         </Overlay>
       </WelcomeSection>
       <Section>
