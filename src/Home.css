@@ -1,116 +1,171 @@
 * {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  main {
-    padding: 20px;
-    background-color: #ffffff;
-  }
-  
-  #welcome {
-    background: url('../src/assets/BrowniesGroup.jpg') center/cover no-repeat;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-  }
-  
-  .welcome-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-  }
+  font-family: "Poppins", sans-serif;
+}
 
-  #welcome h2, #welcome p {
-    color: white;
-  }
-  
-  
-  .cta-btn {
-    display: inline-block;
-    background-color: #ef7b00;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-btn:hover {
-    background-color: #007844;
-  }
-  
-  .activities-overview {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .activities-overview article {
-    flex: 1;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    border: 1px solid #a460a3;
-    transition: transform 0.3s ease;
-  }
-  
-  .activities-overview article:hover {
-    transform: scale(1.05);
-  }
-  
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease-in-out forwards;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .testimonials {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+main {
+  padding: 20px;
+  background-color: #ffffff;
+}
 
-  h2, h3 {
-    text-align: center;
-    color: #603d33;
-  }
+#welcome {
+  background: url("../src/assets/BrowniesGroup.jpg") center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
 
-  p {
-    color: #161b4e;
+.welcome-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#welcome h2,
+#welcome p {
+  color: white;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #ef7b00;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #007844;
+}
+
+.activities-overview {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.activities-overview article {
+  flex: 1;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #a460a3;
+  transition: transform 0.3s ease;
+}
+
+.activities-overview article:hover {
+  transform: scale(1.05);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .testimonials blockquote {
-    font-style: italic;
-    border-left: 4px solid #a460a3;
-    padding-left: 10px;
-    color: #161b4e;
-    display: flex;
-    align-items: center;
-  }
-  
-  .testimonial-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #603d33;
-    color: white;
-  }
-  
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #603d33;
+}
+
+p {
+  color: #161b4e;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  border-left: 4px solid #a460a3;
+  padding-left: 10px;
+  color: #161b4e;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#join-welcome {
+  background: url("../src/assets/BrowniesGroup.jpg") center/cover no-repeat;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#join-welcome .welcome-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#join-welcome h2,
+#join-welcome p {
+  color: white;
+}
+
+#join-intro {
+  text-align: center;
+  padding: 20px;
+}
+
+.join-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.join-options article {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #a460a3;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 400px;
+}
+
+.join-options article:hover {
+  transform: scale(1.05);
+}
+
+.join-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #603d33;
+  color: white;
+}
