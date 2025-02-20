@@ -1,7 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import Home from "./components/home.jsx";
 import Join from "./components/joinUs.jsx";
+import Contact from "./components/contact.jsx";
 
 const App = () => {
   return (
@@ -14,16 +21,31 @@ const App = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link to="/join">Join Us</Link>
+                <NavLink
+                  to="/join"
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                >
+                  Join Us
+                </NavLink>
               </li>
               <li>
                 <Link to="#">Activities</Link>
               </li>
               <li>
-                <Link to="#">Contact</Link>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -32,6 +54,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
