@@ -2,6 +2,7 @@ import React from "react";
 import "../Home.css";
 import Brownie6 from "../assets/Brownie6.png";
 import Leader3 from "../assets/Leader3.png";
+import Footer from "./footer.jsx";
 
 const Join = () => {
   return (
@@ -50,6 +51,7 @@ const Join = () => {
           </a>
         </article>
       </section>
+      <Footer />
     </main>
   );
 };

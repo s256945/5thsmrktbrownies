@@ -1,3 +1,5 @@
+// App.js
+
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -20,28 +22,17 @@ const App = () => {
       <div className="container">
         <header>
           <hgroup>
-            <h1>25th Stowmarket Brownies</h1>
+            <h1>5th Stowmarket Brownies</h1>
           </hgroup>
-          <button className="menu-toggle" onClick={toggleMenu}>
-            ☰
-          </button>
           <nav>
             <ul className={menuOpen ? "show" : ""}>
               <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={toggleMenu}
-                >
+                <NavLink to="/" onClick={toggleMenu}>
                   🏠 Home
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/join"
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={toggleMenu}
-                >
+                <NavLink to="/join" onClick={toggleMenu}>
                   🤝 Join Us
                 </NavLink>
               </li>
@@ -51,11 +42,7 @@ const App = () => {
                 </Link>
               </li>
               <li>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={toggleMenu}
-                >
+                <NavLink to="/contact" onClick={toggleMenu}>
                   📬 Contact
                 </NavLink>
               </li>
