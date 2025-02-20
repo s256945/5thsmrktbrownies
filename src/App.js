@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +11,10 @@ import Join from "./components/joinUs.jsx";
 import Contact from "./components/contact.jsx";
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <Router>
       <div className="container">
@@ -18,39 +22,46 @@ const App = () => {
           <hgroup>
             <h1>25th Stowmarket Brownies</h1>
           </hgroup>
+          <button className="menu-toggle" onClick={toggleMenu}>
+            ☰
+          </button>
           <nav>
-            <ul>
+            <ul className={menuOpen ? "show" : ""}>
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) => (isActive ? "active-link" : "")}
+                  onClick={toggleMenu}
                 >
-                  Home
+                  🏠 Home
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/join"
                   className={({ isActive }) => (isActive ? "active-link" : "")}
+                  onClick={toggleMenu}
                 >
-                  Join Us
+                  🤝 Join Us
                 </NavLink>
               </li>
               <li>
-                <Link to="#">Activities</Link>
+                <Link to="#" onClick={toggleMenu}>
+                  🎉 Activities
+                </Link>
               </li>
               <li>
                 <NavLink
                   to="/contact"
                   className={({ isActive }) => (isActive ? "active-link" : "")}
+                  onClick={toggleMenu}
                 >
-                  Contact
+                  📬 Contact
                 </NavLink>
               </li>
             </ul>
           </nav>
         </header>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
