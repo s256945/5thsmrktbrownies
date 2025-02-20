@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
     position: relative;
   }
   
@@ -23,6 +22,11 @@
     padding: 20px;
     border-radius: 10px;
   }
+
+  #welcome h2, #welcome p {
+    color: white;
+  }
+  
   
   .cta-btn {
     display: inline-block;
@@ -77,12 +81,21 @@
     flex-direction: column;
     gap: 20px;
   }
+
+  h2, h3 {
+    text-align: center;
+    color: #603d33;
+  }
+
+  p {
+    color: #161b4e;
+  }
   
   .testimonials blockquote {
     font-style: italic;
     border-left: 4px solid #a460a3;
     padding-left: 10px;
-    color: #603d33;
+    color: #161b4e;
     display: flex;
     align-items: center;
   }

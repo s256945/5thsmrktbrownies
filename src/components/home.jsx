@@ -37,12 +37,12 @@ const Home = () => {
         <h2>What our Brownies say:</h2>
         <div className="testimonials">
           <blockquote>
-            <img src={Brownie1} alt="Sophie" className="testimonial-img" />
-            "I love Brownies because I get to try new things and make new friends!" — Sophie, 9
+            <img src={Brownie3} alt="Jessica" className="testimonial-img" />
+            "I like doing things outside... we get to learn about our environment and how to care for it" — Jessica, 9
           </blockquote>
           <blockquote>
-            <img src={Brownie3} alt="Emma" className="testimonial-img" />
-            "I had so much fun on our camping trip. I can't wait for the next adventure!" — Emma, 8
+            <img src={Brownie1} alt="Poonam" className="testimonial-img" />
+            "I had never climbed before. I was scared of heights. But I climbed and rang the bell all by myself and felt really proud of myself" — Poonam, 8
           </blockquote>
         </div>
       </section>
