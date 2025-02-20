@@ -11,6 +11,10 @@ This project is a simple web application built with Webpack. It includes a basic
 - npm (Node Package Manager)
 
 ### Installation
-1. Clone the repository:
-   ```sh
-   git clone <repository-url>
+1. Install the dependencies: `npm install`
+
+### Running
+Run `npm start` to start the develpoment server
+
+### Production
+Run `npm run build` to build the project for production. This will create a `dist` directory with the bundled files

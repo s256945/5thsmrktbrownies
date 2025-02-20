@@ -1,0 +1,105 @@
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+
+main {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  header {
+    background-color: #ffc80a;
+    padding: 10px 0;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #603d33;
+    font-weight: bold;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  #welcome {
+    text-align: center;
+    color: #603d33;
+  }
+  
+  .cta-btn a {
+    display: inline-block;
+    background-color: #ef7b00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  #introduction .activities-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  #introduction .activities-overview article {
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #a460a3;
+  }
+  
+  #introduction p, #introduction h2, #welcome h2, #activities-overview h2, #testimonials h2, #welcome p {
+    color: #603d33; 
+  }
+
+  h3 {
+    color: #603d33;
+  }  
+  
+  #testimonials blockquote {
+    font-style: italic;
+    border-left: 4px solid #a460a3; 
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: #603d33;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #603d33; 
+    color: white;
+  }
+  
+  header nav ul li a:hover,
+  .cta-btn a:hover {
+    color: #ffffff;
+    background-color: #007844;
+  }
+  
+  @media (max-width: 768px) {
+    #introduction .activities-overview {
+      flex-direction: column;
+    }
+  
+    #introduction .activities-overview article {
+      margin-bottom: 20px;
+    }
+  }
+  

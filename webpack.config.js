@@ -10,22 +10,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
-  },
+  },  
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Path to your HTML template
+      template: './src/index.html',
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, 'dist'), // Directory to serve static files from
+      directory: path.join(__dirname, 'dist'),
     },
-    port: 9000, // Port for the dev server
+    port: 9000,
   },
   mode: 'development',
 };
