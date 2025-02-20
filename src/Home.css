@@ -1,105 +1,103 @@
 * {
     font-family: 'Poppins', sans-serif;
   }
-
-main {
-    font-family: Arial, sans-serif;
+  
+  main {
     padding: 20px;
     background-color: #ffffff;
   }
   
-  header {
-    background-color: #ffc80a;
-    padding: 10px 0;
-  }
-  
-  header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header nav ul li {
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    text-decoration: none;
-    color: #603d33;
-    font-weight: bold;
-  }
-  
-  section {
-    margin-bottom: 30px;
-  }
-  
   #welcome {
+    background: url('../src/assets/BrowniesGroup.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #603d33;
+    color: white;
+    position: relative;
   }
   
-  .cta-btn a {
+  .welcome-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .cta-btn {
     display: inline-block;
     background-color: #ef7b00;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s ease;
   }
   
-  #introduction .activities-overview {
+  .cta-btn:hover {
+    background-color: #007844;
+  }
+  
+  .activities-overview {
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
   
-  #introduction .activities-overview article {
+  .activities-overview article {
     flex: 1;
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 5px;
     border: 1px solid #a460a3;
+    transition: transform 0.3s ease;
   }
   
-  #introduction p, #introduction h2, #welcome h2, #activities-overview h2, #testimonials h2, #welcome p {
-    color: #603d33; 
+  .activities-overview article:hover {
+    transform: scale(1.05);
   }
-
-  h3 {
-    color: #603d33;
-  }  
   
-  #testimonials blockquote {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .testimonials blockquote {
     font-style: italic;
-    border-left: 4px solid #a460a3; 
+    border-left: 4px solid #a460a3;
     padding-left: 10px;
-    margin-bottom: 20px;
     color: #603d33;
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
   }
   
   footer {
     text-align: center;
     padding: 20px;
-    background-color: #603d33; 
+    background-color: #603d33;
     color: white;
-  }
-  
-  header nav ul li a:hover,
-  .cta-btn a:hover {
-    color: #ffffff;
-    background-color: #007844;
-  }
-  
-  @media (max-width: 768px) {
-    #introduction .activities-overview {
-      flex-direction: column;
-    }
-  
-    #introduction .activities-overview article {
-      margin-bottom: 20px;
-    }
   }
   
