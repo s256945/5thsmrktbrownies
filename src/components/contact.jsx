@@ -1,42 +1,62 @@
 import React from "react";
-import "../Home.css";
+import styled, { keyframes } from "styled-components";
+import Footer from "./footer.jsx";
+import { WelcomeSection, Main, Overlay, fadeInUp, Button } from "./StyledComponents";
+
+const ContactFormWrapper = styled.section`
+  padding: 40px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+`;
+
+const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #a460a3;
+  border-radius: 5px;
+  background-color: #ffffff;
+  animation: ${fadeInUp} 0.6s ease-in-out forwards;
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #a460a3;
+  border-radius: 5px;
+  background-color: #ffffff;
+  resize: none;
+  animation: ${fadeInUp} 0.6s ease-in-out forwards;
+`;
 
 const Contact = () => {
   return (
-    <main>
-      <section id="contact-header">
-        <div className="welcome-overlay">
+    <Main>
+      <WelcomeSection>
+        <Overlay>
           <h2>Get in Touch!</h2>
           <p>We'd love to hear from you. Send us a message below!</p>
-        </div>
-      </section>
-
-      <section id="contact-form-wrapper">
-        <form className="contact-form">
-          <input
-            type="text"
-            placeholder="👤 Your Name *"
-            required
-            className="fade-in delay-1"
-          />
-          <input
-            type="email"
-            placeholder="📧 Your Email *"
-            required
-            className="fade-in delay-2"
-          />
-          <textarea
-            placeholder="💬 Your Message *"
-            rows="5"
-            required
-            className="fade-in delay-3"
-          ></textarea>
-          <button type="submit" className="cta-btn fade-in delay-4">
-            Send Message
-          </button>
-        </form>
-      </section>
-    </main>
+        </Overlay>
+      </WelcomeSection>
+      <ContactFormWrapper>
+        <ContactForm>
+          <Input type="text" placeholder="👤 Your Name *" required />
+          <Input type="email" placeholder="📧 Your Email *" required />
+          <TextArea placeholder="💬 Your Message *" rows="5" required />
+          <Button type="submit">Send Message</Button>
+        </ContactForm>
+      </ContactFormWrapper>
+      <Footer />
+    </Main>
   );
 };
 
