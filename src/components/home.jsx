@@ -3,7 +3,7 @@ import "../Home.css";
 import Brownie1 from "../../public/assets/Brownie1.png";
 import Brownie3 from "../../public/assets/Brownie3.png";
 import Footer from "./footer.jsx";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import {
   Main,
   Section,
@@ -43,7 +43,9 @@ const Home = () => {
         <Overlay>
           <h2>Welcome to our Brownies Unit!</h2>
           <p>Join us for fun, friendship, and adventure!</p>
-          <Button as="a" href="/join">Join Now</Button>
+          <Button as="a" href="/join">
+            Join Now
+          </Button>
         </Overlay>
       </WelcomeSection>
       <Section>

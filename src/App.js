@@ -10,6 +10,7 @@ import Home from "./components/home.jsx";
 import Join from "./components/joinUs.jsx";
 import Parents from "./components/Parents.jsx";
 import Contact from "./components/contact.jsx";
+import Resources from "./components/Resources.jsx";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +47,11 @@ const App = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/resources" onClick={toggleMenu}>
+                  🗂️ Resources
+                </Link>
+              </li>
+              <li>
                 <NavLink to="/contact" onClick={toggleMenu}>
                   📬 Contact
                 </NavLink>
@@ -57,6 +63,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
           <Route path="/parents" element={<Parents />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
