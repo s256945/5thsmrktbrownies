@@ -1,5 +1,4 @@
 import React from "react";
-import "../Home.css";
 import Brownie1 from "../../public/assets/Brownie1.png";
 import Brownie3 from "../../public/assets/Brownie3.png";
 import Footer from "./footer.jsx";
