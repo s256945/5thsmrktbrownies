@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Footer from "./footer.jsx";
 import {
   Main,
   Input,
@@ -12,6 +11,8 @@ import {
   Section,
   Article,
   FadeIn,
+  StyledH2,
+  StyledH3,
 } from "./StyledComponents.js";
 
 const ActivitiesOverview = styled.div`
@@ -43,7 +44,7 @@ const Parents = () => {
     <Main>
       <WelcomeSection>
         <Overlay>
-          <h2>Parents' Hub</h2>
+          <StyledH2>Parents' Hub</StyledH2>
           <p>
             Stay informed, stay connected! Exclusively for parents and
             guardians.
@@ -53,7 +54,7 @@ const Parents = () => {
       <FormWrapper>
         {!isAuthenticated ? (
           <Form onSubmit={handlePasswordSubmit} className="space-y-4">
-            <h2>🔒 Parents Area - Password Protected</h2>
+            <StyledH2>🔒 Parents Area - Password Protected</StyledH2>
             <p>
               To access important updates, event details, and resources, please
               enter the password provided in your starter pack.
@@ -68,7 +69,7 @@ const Parents = () => {
           </Form>
         ) : (
           <Section>
-            <h2>🎉 Welcome to the Parents Area!</h2>
+            <StyledH2>🎉 Welcome to the Parents Area!</StyledH2>
             <p>
               You now have access to all the latest updates, event schedules,
               and resources tailored for you. Thanks for being part of the 5th
@@ -77,7 +78,7 @@ const Parents = () => {
             <ActivitiesOverview>
               <FadeIn>
                 <Article>
-                  <h3>New starter info</h3>
+                  <StyledH3>New starter info</StyledH3>
                   <p>
                     Here you can revisit all the info given out when your
                     daughter first joins our unit.
@@ -86,7 +87,7 @@ const Parents = () => {
               </FadeIn>
               <FadeIn>
                 <Article>
-                  <h3>Termly plans</h3>
+                  <StyledH3>Termly plans</StyledH3>
                   <p>
                     You can download all our past termly letters which include
                     the plans for that term.
@@ -95,7 +96,7 @@ const Parents = () => {
               </FadeIn>
               <FadeIn>
                 <Article>
-                  <h3>Forms/letters</h3>
+                  <StyledH3>Forms/letters</StyledH3>
                   <p>
                     If you're missing a form or a letter, you can find it here.
                   </p>

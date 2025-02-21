@@ -7,6 +7,14 @@ export const Main = styled.main`
   flex-grow: 1;
 `;
 
+export const StyledH2 = styled.h2`
+  color: #603d33;
+`;
+
+export const StyledH3 = styled.h3`
+  color: #603d33;
+`;
+
 export const Section = styled.section`
   text-align: center;
   padding: 20px;

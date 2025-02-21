@@ -7,6 +7,7 @@ import {
   FadeIn,
   Article,
   Button,
+  StyledH2,
 } from "./StyledComponents.js";
 import styled from "styled-components";
 
@@ -42,12 +43,12 @@ const Resources = () => {
     <Main>
       <WelcomeSection>
         <Overlay>
-          <h2>Unit resources!</h2>
+          <StyledH2>Unit resources!</StyledH2>
           <p>Resources made for Brownie leaders</p>
         </Overlay>
       </WelcomeSection>
       <Section>
-        <h2>Available Resources</h2>
+        <StyledH2>Available Resources</StyledH2>
         <p>
           Here are the resources I've made for my Brownies unit. Please feel
           free to download our resources and ideas and adapt them to suit your
@@ -57,7 +58,7 @@ const Resources = () => {
           {resources.map((resource, index) => (
             <FadeIn key={index}>
               <Article>
-                <h2>{resource.title}</h2>
+                <StyledH2>{resource.title}</StyledH2>
                 <p>{resource.description}</p>
                 <Button>Download</Button>
               </Article>

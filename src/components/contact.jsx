@@ -10,6 +10,7 @@ import {
   Input,
   Form,
   FormWrapper,
+  StyledH2,
 } from "./StyledComponents";
 
 const TextArea = styled.textarea`
@@ -35,7 +36,7 @@ const Contact = () => {
     <Main>
       <WelcomeSection>
         <Overlay>
-          <h2>Get in Touch!</h2>
+          <StyledH2>Get in Touch!</StyledH2>
           <p>We'd love to hear from you. Send us a message below!</p>
         </Overlay>
       </WelcomeSection>

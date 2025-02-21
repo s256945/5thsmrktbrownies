@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Brownie6 from "../../public/assets/Brownie6.png";
 import Leader3 from "../../public/assets/Leader3.png";
-import Footer from "./footer.jsx";
 import {
   Main,
   Section,
@@ -11,6 +10,8 @@ import {
   FadeIn,
   WelcomeSection,
   Article,
+  StyledH2,
+  StyledH3,
 } from "./StyledComponents";
 
 const JoinOptions = styled.div`
@@ -34,12 +35,12 @@ const Join = () => {
     <Main>
       <WelcomeSection>
         <Overlay>
-          <h2>Join Us Today!</h2>
+          <StyledH2>Join Us Today!</StyledH2>
           <p>Be part of the adventure and fun at Brownies!</p>
         </Overlay>
       </WelcomeSection>
       <Section>
-        <h2>How to Join</h2>
+        <StyledH2>How to Join</StyledH2>
         <p>
           Whether you want to become a Brownie or volunteer, there's a place for
           you!
@@ -49,7 +50,7 @@ const Join = () => {
         <FadeIn>
           <Article>
             <JoinImg src={Brownie6} alt="Brownie Girl" />
-            <h3>🎀 Join as a Brownie</h3>
+            <StyledH3>🎀 Join as a Brownie</StyledH3>
             <p>
               Brownies is full of fun, learning, and adventure! Girls in Guiding
               are 23% more confident and 3x more likely to contribute to their
@@ -66,7 +67,7 @@ const Join = () => {
         <FadeIn>
           <Article>
             <JoinImg src={Leader3} alt="Volunteer Helping" />
-            <h3>🤝 Join as a Volunteer</h3>
+            <StyledH3>🤝 Join as a Volunteer</StyledH3>
             <p>
               Help all girls know they can do anything by volunteering with us.
               Make a difference and be part of the guiding community!
