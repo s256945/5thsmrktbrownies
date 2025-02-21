@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Brownie6 from "../assets/Brownie6.png";
-import Leader3 from "../assets/Leader3.png";
+import Brownie6 from "../../public/assets/Brownie6.png";
+import Leader3 from "../../public/assets/Leader3.png";
 import Footer from "./footer.jsx";
 import {
   Main,
