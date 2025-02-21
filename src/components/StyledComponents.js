@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import BackgroundImage from "../../public/assets/BrowniesGroup.jpg"
+import BackgroundImage from "../../public/assets/BrowniesGroup.jpg";
 
 export const Main = styled.main`
   padding: 20px;
@@ -48,7 +48,7 @@ export const Button = styled.button.attrs((props) => ({
   transition: background 0.3s ease;
 
   &:hover {
-    background-color: #007844;
+    background-color: #a460a3;
   }
 `;
 

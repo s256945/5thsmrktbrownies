@@ -28,6 +28,10 @@ const Parents = () => {
 
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
+    if (!password) {
+      alert("Please enter a password.");
+      return;
+    }
     if (password === correctPassword) {
       setIsAuthenticated(true);
     } else {
@@ -101,7 +105,6 @@ const Parents = () => {
           </Section>
         )}
       </FormWrapper>
-      <Footer />
     </Main>
   );
 };

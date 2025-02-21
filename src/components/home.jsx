@@ -109,7 +109,6 @@ const Home = () => {
           and how to care for it" — Jessica, 9
         </TestimonialsBlockquote>
       </Section>
-      <Footer />
     </Main>
   );
 };

@@ -20,10 +20,17 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   background-color: #ffffff;
   resize: none;
+  min-height: 120px;
   animation: ${fadeInUp} 0.6s ease-in-out forwards;
 `;
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission (e.g., send data to an API)
+    alert("Message Sent!");
+  };
+
   return (
     <Main>
       <WelcomeSection>
@@ -33,14 +40,29 @@ const Contact = () => {
         </Overlay>
       </WelcomeSection>
       <FormWrapper>
-        <Form>
-          <Input type="text" placeholder="👤 Your Name *" required />
-          <Input type="email" placeholder="📧 Your Email *" required />
-          <TextArea placeholder="💬 Your Message *" rows="5" required />
+        <Form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="👤 Your Name *"
+            required
+            aria-label="Your Name"
+          />
+          <Input
+            type="email"
+            placeholder="📧 Your Email *"
+            required
+            pattern="^[^@]+@[^@]+\.[^@]+$"
+            aria-label="Your Email"
+          />
+          <TextArea
+            placeholder="💬 Your Message *"
+            rows="5"
+            required
+            aria-label="Your Message"
+          />
           <Button type="submit">Send Message</Button>
         </Form>
       </FormWrapper>
-      <Footer />
     </Main>
   );
 };

@@ -18,6 +18,8 @@ const JoinOptions = styled.div`
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const JoinImg = styled.img`
@@ -78,7 +80,6 @@ const Join = () => {
           </Article>
         </FadeIn>
       </JoinOptions>
-      <Footer />
     </Main>
   );
 };

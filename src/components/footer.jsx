@@ -10,9 +10,6 @@ const FooterContainer = styled.div`
   background-color: #ffc80a;
   padding: 10px 20px;
   text-align: center;
-  color: white;
-  position: relative;
-  z-index: 1000;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 `;
 
