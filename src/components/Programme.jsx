@@ -36,7 +36,6 @@ const Programme = () => {
           growth and self-confidence in girls of all ages.
         </p>
       </Section>
-
       <ActivitiesGrid>
         <FadeIn>
           <Article>
@@ -49,6 +48,8 @@ const Programme = () => {
               exercises, or fun science experiments.
             </p>
           </Article>
+        </FadeIn>
+        <FadeIn>
           <Article>
             <StyledH2>Skills Builders</StyledH2>
             <p>
@@ -71,15 +72,17 @@ const Programme = () => {
               <Button href="#">Discover all Brownies interest badges</Button>
             </p>
           </Article>
+        </FadeIn>
+        <FadeIn>
           <Article>
             <StyledH2>Theme Awards</StyledH2>
             <p>
               Brownies can earn Theme Awards by completing UMAs and Skills
               Builders within one of the 6 key programme themes: Know Myself,
               Express Myself, Be Well, Have Adventures, Take Action, and Skills
-              for My Future. As they complete theme awards, they can earn Bronze,
-              Silver, and Gold awards, helping them build confidence and feel
-              proud of their accomplishments.
+              for My Future. As they complete theme awards, they can earn
+              Bronze, Silver, and Gold awards, helping them build confidence and
+              feel proud of their accomplishments.
             </p>
           </Article>
         </FadeIn>

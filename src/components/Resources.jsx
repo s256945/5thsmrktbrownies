@@ -54,18 +54,18 @@ const Resources = () => {
           free to download our resources and ideas and adapt them to suit your
           needs.
         </p>
-        <ActivitiesGrid>
-          {resources.map((resource, index) => (
-            <FadeIn key={index}>
-              <Article>
-                <StyledH2>{resource.title}</StyledH2>
-                <p>{resource.description}</p>
-                <Button>Download</Button>
-              </Article>
-            </FadeIn>
-          ))}
-        </ActivitiesGrid>
       </Section>
+      <ActivitiesGrid>
+        {resources.map((resource, index) => (
+          <FadeIn key={index}>
+            <Article>
+              <StyledH2>{resource.title}</StyledH2>
+              <p>{resource.description}</p>
+              <Button>Download</Button>
+            </Article>
+          </FadeIn>
+        ))}
+      </ActivitiesGrid>
     </Main>
   );
 };
