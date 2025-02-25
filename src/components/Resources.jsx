@@ -20,23 +20,52 @@ const ActivitiesGrid = styled.div`
 
 const resources = [
   {
+    title: "Safeguarding/info sheets",
+    description:
+      "Information sheets with important safeguarding help/advice taken directly from the Girlguiding website.",
+    file: "",
+  },
+  {
+    title: "New starter pack",
+    description:
+      "Information I give to new Brownie parents to help them understand what Brownies is all about.",
+    file: "/files/new-starter.pdf",
+  },
+  {
     title: "Meeting Planner",
-    description: "A simple template to organize meetings.",
+    description:
+      "A simple template to organise weekly meetings. Includes date, name of activity, and materials needed.",
+    file: "",
   },
   {
     title: "Badge Tracker",
-    description: "A spreadsheet to track badge progress.",
+    description:
+      "A spreadsheet to track activity progress so you can see when your unit last did which UMA/SB",
+    file: "",
   },
   {
-    title: "Activity Ideas",
-    description: "Engaging activities for Brownie groups.",
+    title: "Games",
+    description:
+      "Some of the games I've played with my units with the instructions and resources needed.",
+    file: "",
   },
   {
-    title: "Outdoor Challenges",
-    description: "Fun tasks for outdoor learning.",
+    title: "Interest Badge Worksheets",
+    description:
+      "Worksheets for Interest Badges which meet the required criteria.",
+    file: "",
   },
-  { title: "Craft Guides", description: "Easy-to-follow craft activities." },
-  { title: "Themed Meetings", description: "Ideas for special event nights." },
+  {
+    title: "Craft Guides",
+    description:
+      "Easy-to-follow craft activities. Complete with pictures, instructions, and materials needed.",
+    file: "",
+  },
+  {
+    title: "Themed Meetings",
+    description: "Ideas for special event nights and pack holidays.",
+    file: "",
+  },
 ];
 
 const Resources = () => {
@@ -62,7 +91,9 @@ const Resources = () => {
             <Article>
               <StyledH3>{resource.title}</StyledH3>
               <p>{resource.description}</p>
-              <Button>Download</Button>
+              <a href={resource.file} download>
+                <Button>Download</Button>
+              </a>
             </Article>
           </FadeIn>
         ))}

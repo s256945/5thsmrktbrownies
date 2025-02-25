@@ -11,6 +11,7 @@ import {
   Form,
   FormWrapper,
   StyledH2,
+  Section,
 } from "./StyledComponents";
 
 const TextArea = styled.textarea`
@@ -40,6 +41,16 @@ const Contact = () => {
           <p>We'd love to hear from you. Send us a message below!</p>
         </Overlay>
       </WelcomeSection>
+      <Section>
+        <StyledH2>Contact Us</StyledH2>
+        <p>
+          You can submit a message to us using the form below, or you can email{" "}
+          <a href="mailto:fifthstowmarketbrownies@hotmail.com">
+            fifthstowmarketbrownies@hotmail.com
+          </a>{" "}
+          directly.
+        </p>
+      </Section>
       <FormWrapper>
         <Form onSubmit={handleSubmit}>
           <Input
