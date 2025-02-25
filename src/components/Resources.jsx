@@ -8,6 +8,7 @@ import {
   Article,
   Button,
   StyledH2,
+  StyledH3,
 } from "./StyledComponents.js";
 import styled from "styled-components";
 
@@ -59,7 +60,7 @@ const Resources = () => {
         {resources.map((resource, index) => (
           <FadeIn key={index}>
             <Article>
-              <StyledH2>{resource.title}</StyledH2>
+              <StyledH3>{resource.title}</StyledH3>
               <p>{resource.description}</p>
               <Button>Download</Button>
             </Article>
