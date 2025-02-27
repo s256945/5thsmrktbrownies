@@ -7,7 +7,6 @@ import {
   Section,
   WelcomeSection,
   Overlay,
-  Button,
   FadeIn,
   Article,
   StyledH2,
@@ -56,9 +55,6 @@ const Home = () => {
         <Overlay>
           <StyledH2>Welcome to our Brownies Unit!</StyledH2>
           <p>Join us for fun, friendship, and adventure!</p>
-          <Button as="a" href="/join">
-            Join Now
-          </Button>
         </Overlay>
       </WelcomeSection>
       <Section>
