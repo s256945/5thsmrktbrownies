@@ -43,7 +43,8 @@ const Join = () => {
         <StyledH2>How to Join</StyledH2>
         <p>
           Whether you want to become a Brownie or volunteer, there's a place for
-          you!
+          you! When registering, select 5th Stowmarket Brownies as your first choice and
+          your details will be directed to us via official channels.
         </p>
       </Section>
       <JoinOptions>
