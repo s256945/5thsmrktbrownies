@@ -12,7 +12,7 @@ import Programme from "./components/Programme.jsx";
 const App = () => {
   return (
     <Router>
-      <div className="container">
+      <div>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
