@@ -58,7 +58,7 @@ const Contact = () => {
           <a href="mailto:fifthstowmarketbrownies@hotmail.com">
             fifthstowmarketbrownies@hotmail.com
           </a>{" "}
-          directly.
+          .
         </p>
       </Section>
       <FormWrapper>
