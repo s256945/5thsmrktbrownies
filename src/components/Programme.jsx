@@ -87,7 +87,7 @@ const Programme = () => {
         <p id="programme-description">
           The Girlguiding programme is designed to empower girls to explore new
           activities, develop skills, and engage in fun and adventurous
-          challenges. Whether it's earning badges, going on outdoor adventures,
+          challenges. Whether it&apos;s earning badges, going on outdoor adventures,
           or learning leadership skills, the programme is tailored to encourage
           growth and self-confidence in girls of all ages.
         </p>

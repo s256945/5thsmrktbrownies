@@ -52,21 +52,22 @@ const Parents = () => {
     <Main>
       <WelcomeSection>
         <Overlay>
-          <StyledH2>Parents' Hub</StyledH2>
-          <p>
-            Stay informed, stay connected! Exclusively for parents and
-            guardians.
-          </p>
+          <StyledH2>Parents&apos; Hub</StyledH2>
+          <p>Stay informed, stay connected!</p>
         </Overlay>
       </WelcomeSection>
+      <Section>
+        <StyledH2>Exclusively for parents and guardians</StyledH2>
+        <p>
+          To access important updates, event details, and resources, please
+          enter the password provided in your starter pack.
+        </p>
+      </Section>
       <FormWrapper>
         {!isAuthenticated ? (
           <Form onSubmit={handlePasswordSubmit} className="space-y-4">
             <StyledH2>🔒 Parents Area - Password Protected</StyledH2>
-            <p>
-              To access important updates, event details, and resources, please
-              enter the password provided in your starter pack.
-            </p>
+
             <Input
               type="password"
               placeholder="Enter Password"
@@ -108,7 +109,8 @@ const Parents = () => {
                 <Article>
                   <StyledH3>📄 Forms & Letters</StyledH3>
                   <p>
-                    If you're missing a form or letter, you can find it here.
+                    If you&apos;re missing a form or letter, you can find it
+                    here.
                   </p>
                 </Article>
               </FadeIn>

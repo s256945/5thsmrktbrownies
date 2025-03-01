@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Footer from "./footer.jsx";
 import {
   WelcomeSection,
   Main,
@@ -15,7 +14,6 @@ import {
 } from "./StyledComponents";
 
 const TextArea = styled.textarea`
-  width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #a460a3;
@@ -50,7 +48,7 @@ const Contact = () => {
       <WelcomeSection>
         <Overlay>
           <StyledH2>Get in Touch!</StyledH2>
-          <p>We'd love to hear from you. Send us a message below!</p>
+          <p>We&apos;d love to hear from you. Send us a message below!</p>
         </Overlay>
       </WelcomeSection>
       <Section>

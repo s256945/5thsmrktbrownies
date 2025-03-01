@@ -30,20 +30,6 @@ const JoinImg = styled.img`
   margin-bottom: 10px;
 `;
 
-const StyledLinkButton = styled(Button)`
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  max-width: 200px;
-  padding: 10px;
-  font-weight: bold;
-
-  &:focus {
-    outline: 3px solid #ffc80a;
-  }
-`;
-
 const Join = () => {
   return (
     <Main>
@@ -56,7 +42,7 @@ const Join = () => {
       <Section>
         <StyledH2>How to Join</StyledH2>
         <p>
-          Whether you want to become a Brownie or volunteer, there's a place for
+          Whether you want to become a Brownie or volunteer, there&apos;s a place for
           you! When registering, select 5th Stowmarket Brownies as your first
           choice, and your details will be directed to us via official channels.
         </p>
@@ -74,7 +60,7 @@ const Join = () => {
               are 23% more confident and 3x more likely to contribute to their
               community.
             </p>
-            <StyledLinkButton
+            <Button
               as="a"
               href="https://go.girlguiding.org.uk/join-us/join-as-member/"
               target="_blank"
@@ -82,7 +68,7 @@ const Join = () => {
               aria-label="Register your daughter as a Brownie - opens in a new tab"
             >
               Register your daughter
-            </StyledLinkButton>
+            </Button>
           </Article>
         </FadeIn>
         <FadeIn>
@@ -93,7 +79,7 @@ const Join = () => {
               Help all girls know they can do anything by volunteering with us.
               Make a difference and be part of the guiding community!
             </p>
-            <StyledLinkButton
+            <Button
               as="a"
               href="https://www.girlguiding.org.uk/link/f1b25a35c49d43768df10777201c3475.aspx"
               target="_blank"
@@ -101,7 +87,7 @@ const Join = () => {
               aria-label="Register as a volunteer for Girlguiding - opens in a new tab"
             >
               Register to volunteer
-            </StyledLinkButton>
+            </Button>
           </Article>
         </FadeIn>
       </JoinOptions>

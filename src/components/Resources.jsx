@@ -80,7 +80,7 @@ const Resources = () => {
       <Section>
         <StyledH2>Available Resources</StyledH2>
         <p>
-          Here are the resources I've made for my Brownies unit. Feel free to
+          Here are the resources I&apos;ve made for my Brownies unit. Feel free to
           download and adapt them to suit your needs.
         </p>
       </Section>

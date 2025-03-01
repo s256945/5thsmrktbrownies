@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/home.jsx";
 import Join from "./components/joinUs.jsx";
-import Parents from "./components/Parents.jsx";
+import Parents from "./components/parents.jsx";
 import Contact from "./components/contact.jsx";
-import Resources from "./components/Resources.jsx";
+import Resources from "./components/resources.jsx";
 import Header from "./components/header.jsx";
 import Footer from "./components/footer.jsx";
-import Programme from "./components/Programme.jsx";
+import Programme from "./components/programme.jsx";
 
 const App = () => {
   return (

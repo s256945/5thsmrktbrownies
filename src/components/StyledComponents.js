@@ -58,6 +58,10 @@ export const Button = styled.button.attrs((props) => ({
   &:hover {
     background-color: #a460a3;
   }
+
+  &:focus {
+    outline: 3px solid #ffc80a;
+  }
 `;
 
 export const fadeInUp = keyframes`
@@ -93,7 +97,6 @@ export const Article = styled.article`
 `;
 
 export const Input = styled.input`
-  width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #a460a3;
@@ -103,7 +106,6 @@ export const Input = styled.input`
 `;
 
 export const FormWrapper = styled.section`
-  padding: 40px 20px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
