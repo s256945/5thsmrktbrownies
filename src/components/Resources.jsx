@@ -26,39 +26,39 @@ const resources = [
     file: "",
   },
   {
-    title: "New starter pack",
+    title: "New Starter Pack",
     description:
-      "Information I give to new Brownie parents to help them understand what Brownies is all about.",
+      "Information for new Brownie parents to help them understand what Brownies is all about.",
     file: "/files/new-starter.pdf",
   },
   {
     title: "Meeting Planner",
     description:
-      "A simple template to organise weekly meetings. Includes date, name of activity, and materials needed.",
+      "A simple template to organise weekly meetings, including date, activity, and materials needed.",
     file: "",
   },
   {
     title: "Badge Tracker",
     description:
-      "A spreadsheet to track activity progress so you can see when your unit last did which UMA/SB",
+      "A spreadsheet to track activity progress so you can see when your unit last did each UMA/SB.",
     file: "",
   },
   {
     title: "Games",
     description:
-      "Some of the games I've played with my units with the instructions and resources needed.",
+      "Some of the games I've played with my units, complete with instructions and resources needed.",
     file: "",
   },
   {
     title: "Interest Badge Worksheets",
     description:
-      "Worksheets for Interest Badges which meet the required criteria.",
+      "Worksheets for Interest Badges that meet the required criteria.",
     file: "",
   },
   {
     title: "Craft Guides",
     description:
-      "Easy-to-follow craft activities. Complete with pictures, instructions, and materials needed.",
+      "Easy-to-follow craft activities with pictures, instructions, and materials lists.",
     file: "",
   },
   {
@@ -73,16 +73,15 @@ const Resources = () => {
     <Main>
       <WelcomeSection>
         <Overlay>
-          <StyledH2>Unit resources!</StyledH2>
+          <StyledH2>Unit Resources!</StyledH2>
           <p>Resources made for Brownie leaders</p>
         </Overlay>
       </WelcomeSection>
       <Section>
         <StyledH2>Available Resources</StyledH2>
         <p>
-          Here are the resources I've made for my Brownies unit. Please feel
-          free to download our resources and ideas and adapt them to suit your
-          needs.
+          Here are the resources I've made for my Brownies unit. Feel free to
+          download and adapt them to suit your needs.
         </p>
       </Section>
       <ActivitiesGrid>
@@ -91,9 +90,14 @@ const Resources = () => {
             <Article>
               <StyledH3>{resource.title}</StyledH3>
               <p>{resource.description}</p>
-              <a href={resource.file} download>
-                <Button>Download</Button>
-              </a>
+              <Button
+                as="a"
+                href={resource.file}
+                download
+                aria-label={`Download ${resource.title}`}
+              >
+                Download
+              </Button>
             </Article>
           </FadeIn>
         ))}

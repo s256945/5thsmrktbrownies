@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from '../../public/assets/logo.png'
+import Logo from "../assets/images/logo.png";
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@ const FooterContainer = styled.div`
 `;
 
 const FooterText = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
   flex-grow: 1;
 `;
@@ -26,10 +26,10 @@ const LogoImage = styled.img`
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <div className="logo">
-        <LogoImage src={Logo} alt="Logo" />
-      </div>
+    <FooterContainer aria-label="Website footer">
+      <a href="/" aria-label="Go to homepage">
+        <LogoImage src={Logo} alt="5th Stowmarket Brownies Logo" />
+      </a>
       <FooterText>
         © 2025 5th Stowmarket Brownies. Website created by Amy Jordan.
       </FooterText>

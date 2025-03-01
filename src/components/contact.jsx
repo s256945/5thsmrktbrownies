@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Footer from "./footer.jsx";
 import {
@@ -24,13 +24,25 @@ const TextArea = styled.textarea`
   resize: none;
   min-height: 120px;
   animation: ${fadeInUp} 0.6s ease-in-out forwards;
+
+  &:focus {
+    border-color: #603d33;
+    outline: 2px solid #603d33;
+  }
+`;
+
+const Label = styled.label`
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 `;
 
 const Contact = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to an API)
-    alert("Message Sent!");
+    setFormSubmitted(true);
   };
 
   return (
@@ -44,7 +56,7 @@ const Contact = () => {
       <Section>
         <StyledH2>Contact Us</StyledH2>
         <p>
-          You can submit a message to us using the form below, or you can email{" "}
+          You can submit a message to us using the form below, or email{" "}
           <a href="mailto:fifthstowmarketbrownies@hotmail.com">
             fifthstowmarketbrownies@hotmail.com
           </a>{" "}
@@ -52,28 +64,41 @@ const Contact = () => {
         </p>
       </Section>
       <FormWrapper>
-        <Form onSubmit={handleSubmit}>
-          <Input
-            type="text"
-            placeholder="👤 Your Name *"
-            required
-            aria-label="Your Name"
-          />
-          <Input
-            type="email"
-            placeholder="📧 Your Email *"
-            required
-            pattern="^[^@]+@[^@]+\.[^@]+$"
-            aria-label="Your Email"
-          />
-          <TextArea
-            placeholder="💬 Your Message *"
-            rows="5"
-            required
-            aria-label="Your Message"
-          />
-          <Button type="submit">Send Message</Button>
-        </Form>
+        {formSubmitted ? (
+          <p role="alert" style={{ color: "#008000", fontWeight: "bold" }}>
+            ✅ Message sent successfully!
+          </p>
+        ) : (
+          <Form onSubmit={handleSubmit} aria-labelledby="contact-form-title">
+            <StyledH2 id="contact-form-title">Send Us a Message</StyledH2>
+            <Label htmlFor="name">Your Name *</Label>
+            <Input
+              id="name"
+              type="text"
+              placeholder="👤 Enter your name"
+              required
+            />
+            <Label htmlFor="email">Your Email *</Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="📧 Enter your email"
+              required
+              pattern="^[^@]+@[^@]+\.[^@]+$"
+              aria-describedby="email-desc"
+            />
+            <p id="email-desc" style={{ fontSize: "0.8rem", color: "#555" }}>
+              Please enter a valid email address (e.g., name@example.com).
+            </p>
+            <Label htmlFor="message">Your Message *</Label>
+            <TextArea
+              id="message"
+              placeholder="💬 Type your message here"
+              required
+            />
+            <Button type="submit">Send Message</Button>
+          </Form>
+        )}
       </FormWrapper>
     </Main>
   );

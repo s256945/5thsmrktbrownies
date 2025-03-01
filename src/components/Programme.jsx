@@ -17,7 +17,6 @@ const ActivitiesGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -85,7 +84,7 @@ const Programme = () => {
       </WelcomeSection>
       <Section>
         <StyledH2>What is the Girlguiding Programme?</StyledH2>
-        <p>
+        <p id="programme-description">
           The Girlguiding programme is designed to empower girls to explore new
           activities, develop skills, and engage in fun and adventurous
           challenges. Whether it's earning badges, going on outdoor adventures,
@@ -93,8 +92,8 @@ const Programme = () => {
           growth and self-confidence in girls of all ages.
         </p>
       </Section>
-      <ActivitiesGrid>
-        {activityData.map(({ alt, title, description, link, buttonLabel }) => (
+      <ActivitiesGrid aria-labelledby="programme-elements">
+        {activityData.map(({ title, description, link, buttonLabel }) => (
           <FadeIn key={title}>
             <Article>
               <StyledH3>{title}</StyledH3>
@@ -103,6 +102,8 @@ const Programme = () => {
                 as="a"
                 href={link}
                 aria-label={`Learn more about ${title}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {buttonLabel}
               </Button>

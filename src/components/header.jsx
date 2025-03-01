@@ -42,9 +42,15 @@ const NavBar = styled.nav`
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  a:hover {
+  a:hover,
+  a:focus {
     background-color: #ef7b00;
     color: #fff;
+  }
+
+  .active {
+    background-color: #ef7b00;
+    font-weight: bold;
   }
 `;
 
@@ -61,11 +67,17 @@ const Header = () => {
   return (
     <StyledHeader>
       <Heading>5th Stowmarket Brownies</Heading>
-      <NavBar>
+      <NavBar aria-label="Main navigation">
         <ul>
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <NavLink to={item.to}>
+          {menuItems.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                activeClassName="active"
+                aria-current={
+                  window.location.pathname === item.to ? "page" : undefined
+                }
+              >
                 {item.label}
               </NavLink>
             </li>

@@ -21,22 +21,30 @@ const ActivitiesOverview = styled.div`
   gap: 20px;
 `;
 
+const ErrorMessage = styled.p`
+  color: #d9534f;
+  font-weight: bold;
+  margin-top: 10px;
+`;
+
 const Parents = () => {
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [error, setError] = useState("");
 
   const correctPassword = "Stowmarket5th#";
 
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
     if (!password) {
-      alert("Please enter a password.");
+      setError("Please enter a password.");
       return;
     }
     if (password === correctPassword) {
       setIsAuthenticated(true);
+      setError("");
     } else {
-      alert("Oops! Incorrect password. Please try again.");
+      setError("Oops! Incorrect password. Please try again.");
     }
   };
 
@@ -64,8 +72,11 @@ const Parents = () => {
               placeholder="Enter Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              aria-label="Enter password for Parents Area"
+              aria-required="true"
             />
             <Button type="submit">Unlock Access</Button>
+            {error && <ErrorMessage aria-live="polite">{error}</ErrorMessage>}
           </Form>
         ) : (
           <Section>
@@ -78,27 +89,26 @@ const Parents = () => {
             <ActivitiesOverview>
               <FadeIn>
                 <Article>
-                  <StyledH3>New starter info</StyledH3>
+                  <StyledH3>📖 New Starter Info</StyledH3>
                   <p>
-                    Here you can revisit all the info given out when your
-                    daughter first joins our unit.
+                    Revisit all the information provided when your Brownie first
+                    joined.
                   </p>
                 </Article>
               </FadeIn>
               <FadeIn>
                 <Article>
-                  <StyledH3>Termly plans</StyledH3>
+                  <StyledH3>📅 Termly Plans</StyledH3>
                   <p>
-                    You can download all our past termly letters which include
-                    the plans for that term.
+                    Download past termly letters, including plans for the term.
                   </p>
                 </Article>
               </FadeIn>
               <FadeIn>
                 <Article>
-                  <StyledH3>Forms/letters</StyledH3>
+                  <StyledH3>📄 Forms & Letters</StyledH3>
                   <p>
-                    If you're missing a form or a letter, you can find it here.
+                    If you're missing a form or letter, you can find it here.
                   </p>
                 </Article>
               </FadeIn>

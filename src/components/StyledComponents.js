@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import BackgroundImage from "../../public/assets/BrowniesGroup.jpg";
+import BackgroundImage from "../assets/images/BrowniesGroup.jpg";
 
 export const Main = styled.main`
   padding: 20px;

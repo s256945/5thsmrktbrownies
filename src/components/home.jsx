@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Brownie1 from "../../public/assets/Brownie1.png";
-import Brownie3 from "../../public/assets/Brownie3.png";
+import Brownie1 from "../assets/images/Brownie1.png";
+import Brownie3 from "../assets/images/Brownie3.png";
 import styled from "styled-components";
 import {
   Main,
@@ -17,6 +17,7 @@ const ActivitiesOverview = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 `;
 
 const TestimonialsBlockquote = styled.blockquote`
@@ -26,13 +27,20 @@ const TestimonialsBlockquote = styled.blockquote`
   color: #161b4e;
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 const TestimonialImg = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 10px;
+`;
+
+const AccessibleFbEmbed = styled.div`
+  iframe {
+    border: none;
+    max-width: 100%;
+  }
 `;
 
 const Home = () => {
@@ -45,6 +53,7 @@ const Home = () => {
         "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0";
       script.async = true;
       script.defer = true;
+      script.crossOrigin = "anonymous";
       document.body.appendChild(script);
     }
   }, []);
@@ -98,48 +107,55 @@ const Home = () => {
       </Section>
       <Section>
         <StyledH2>What our Brownies say:</StyledH2>
-        <TestimonialsBlockquote>
-          <TestimonialImg
-            src={Brownie1}
-            alt="Poonam"
-            className="testimonial-img"
-          />
-          "I had never climbed before. I was scared of heights. But I climbed
-          and rang the bell all by myself and felt really proud of myself" —
-          Poonam, 8
+        <TestimonialsBlockquote aria-label="Testimonial from Poonam, aged 8">
+          <TestimonialImg src={Brownie1} alt="Poonam smiling" />
+          <p>
+            "I had never climbed before. I was scared of heights. But I climbed
+            and rang the bell all by myself and felt really proud of myself." —
+            <strong> Poonam, 8</strong>
+          </p>
         </TestimonialsBlockquote>
-        <TestimonialsBlockquote>
+        <TestimonialsBlockquote aria-label="Testimonial from Jessica, aged 9">
           <TestimonialImg
             src={Brownie3}
-            alt="Jessica"
-            className="testimonial-img"
+            alt="Jessica enjoying outdoor activities"
           />
-          "I like doing things outside... we get to learn about our environment
-          and how to care for it" — Jessica, 9
+          <p>
+            "I like doing things outside... we get to learn about our
+            environment and how to care for it." —<strong> Jessica, 9</strong>
+          </p>
         </TestimonialsBlockquote>
       </Section>
       <Section>
         <StyledH2>Check our socials!</StyledH2>
-        <div
-          className="fb-page"
-          data-href="https://www.facebook.com/5th-Stowmarket-Brownies-100081302018670"
-          data-tabs="timeline"
-          data-width="500"
-          data-height="500"
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
+        <AccessibleFbEmbed
+          role="complementary"
+          aria-label="Facebook Page Embed"
         >
-          <blockquote
-            cite="https://www.facebook.com/5th-Stowmarket-Brownies-100081302018670"
-            className="fb-xfbml-parse-ignore"
+          <div
+            className="fb-page"
+            data-href="https://www.facebook.com/5th-Stowmarket-Brownies-100081302018670"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="500"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
           >
-            <a href="https://www.facebook.com/5th-Stowmarket-Brownies-100081302018670">
-              5th Stowmarket Brownies
-            </a>
-          </blockquote>
-        </div>
+            <blockquote
+              cite="https://www.facebook.com/5th-Stowmarket-Brownies-100081302018670"
+              className="fb-xfbml-parse-ignore"
+            >
+              <a
+                href="https://www.facebook.com/5th-Stowmarket-Brownies-100081302018670"
+                aria-label="Visit 5th Stowmarket Brownies Facebook Page"
+              >
+                5th Stowmarket Brownies
+              </a>
+            </blockquote>
+          </div>
+        </AccessibleFbEmbed>
       </Section>
     </Main>
   );
