@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Brownie1 from "../assets/images/Brownie1.png";
-import Brownie3 from "../assets/images/Brownie3.png";
+import Brownie1 from "../../public/assets/images/Brownie1.png";
+import Brownie3 from "../../public/assets/images/Brownie3.png";
 import styled from "styled-components";
 import {
   Main,
@@ -110,9 +110,9 @@ const Home = () => {
         <TestimonialsBlockquote aria-label="Testimonial from Poonam, aged 8">
           <TestimonialImg src={Brownie1} alt="Poonam smiling" />
           <p>
-            &quot;I had never climbed before. I was scared of heights. But I climbed
-            and rang the bell all by myself and felt really proud of myself.&quot; —
-            <strong> Poonam, 8</strong>
+            &quot;I had never climbed before. I was scared of heights. But I
+            climbed and rang the bell all by myself and felt really proud of
+            myself.&quot; —<strong> Poonam, 8</strong>
           </p>
         </TestimonialsBlockquote>
         <TestimonialsBlockquote aria-label="Testimonial from Jessica, aged 9">
@@ -122,7 +122,8 @@ const Home = () => {
           />
           <p>
             &quot;I like doing things outside... we get to learn about our
-            environment and how to care for it.&quot; —<strong> Jessica, 9</strong>
+            environment and how to care for it.&quot; —
+            <strong> Jessica, 9</strong>
           </p>
         </TestimonialsBlockquote>
       </Section>

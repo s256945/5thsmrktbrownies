@@ -29,13 +29,13 @@ const resources = [
     title: "New Starter Pack",
     description:
       "Information for new Brownie parents to help them understand what Brownies is all about.",
-    file: "/files/new-starter.pdf",
+    file: "/assets/files/new-starter.pdf",
   },
   {
     title: "Meeting Planner",
     description:
       "A simple template to organise weekly meetings, including date, activity, and materials needed.",
-    file: "",
+    file: "/assets/files/term-plan.pdf",
   },
   {
     title: "Badge Tracker",
