@@ -27,10 +27,38 @@ const ErrorMessage = styled.p`
   margin-top: 10px;
 `;
 
+const InputWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+`;
+
+const StyledInput = styled(Input)`
+  width: 100%;
+  padding-right: 35px; /* Space for the button */
+`;
+
+const ToggleButton = styled.button`
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #555;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #000;
+  }
+`;
+
 const Parents = () => {
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const correctPassword = "Stowmarket5th#";
 
@@ -67,17 +95,22 @@ const Parents = () => {
         {!isAuthenticated ? (
           <Form onSubmit={handlePasswordSubmit} className="space-y-4">
             <StyledH2>🔒 Parents Area - Password Protected</StyledH2>
-
-            <Input
-              type="password"
-              placeholder="Enter Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              aria-label="Enter password for Parents Area"
-              aria-required="true"
-            />
+            <InputWrapper>
+              <StyledInput
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <ToggleButton
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "🙈" : "👁"}
+              </ToggleButton>
+            </InputWrapper>
             <Button type="submit">Unlock Access</Button>
-            {error && <ErrorMessage aria-live="polite">{error}</ErrorMessage>}
+            {error && <ErrorMessage role="alert">{error}</ErrorMessage>}
           </Form>
         ) : (
           <Section>
@@ -100,9 +133,7 @@ const Parents = () => {
               <FadeIn>
                 <Article>
                   <StyledH3>📅 Termly Plans</StyledH3>
-                  <p>
-                    Download past termly plans.
-                  </p>
+                  <p>Download past termly plans.</p>
                 </Article>
               </FadeIn>
               <FadeIn>
