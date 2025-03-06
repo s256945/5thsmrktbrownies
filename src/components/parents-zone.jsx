@@ -101,7 +101,7 @@ const Parents = () => {
                 <Article>
                   <StyledH3>📅 Termly Plans</StyledH3>
                   <p>
-                    Download past termly letters, including plans for the term.
+                    Download past termly plans.
                   </p>
                 </Article>
               </FadeIn>

@@ -23,7 +23,7 @@ const resources = [
     title: "Safeguarding/info sheets",
     description:
       "Information sheets with important safeguarding help/advice taken directly from the Girlguiding website.",
-    file: "",
+    file: "/assets/files/safeguarding-info.pdf"
   },
   {
     title: "New Starter Pack",
@@ -37,35 +37,35 @@ const resources = [
       "A simple template to organise weekly meetings, including date, activity, and materials needed.",
     file: "/assets/files/term-plan.pdf",
   },
-  {
-    title: "Badge Tracker",
-    description:
-      "A spreadsheet to track activity progress so you can see when your unit last did each UMA/SB.",
-    file: "",
-  },
-  {
-    title: "Games",
-    description:
-      "Some of the games I've played with my units, complete with instructions and resources needed.",
-    file: "",
-  },
-  {
-    title: "Interest Badge Worksheets",
-    description:
-      "Worksheets for Interest Badges that meet the required criteria.",
-    file: "",
-  },
-  {
-    title: "Craft Guides",
-    description:
-      "Easy-to-follow craft activities with pictures, instructions, and materials lists.",
-    file: "",
-  },
-  {
-    title: "Themed Meetings",
-    description: "Ideas for special event nights and pack holidays.",
-    file: "",
-  },
+  // {
+  //   title: "Badge Tracker",
+  //   description:
+  //     "A spreadsheet to track activity progress so you can see when your unit last did each UMA/SB.",
+  //   file: "",
+  // },
+  // {
+  //   title: "Games",
+  //   description:
+  //     "Some of the games I've played with my units, complete with instructions and resources needed.",
+  //   file: "",
+  // },
+  // {
+  //   title: "Interest Badge Worksheets",
+  //   description:
+  //     "Worksheets for Interest Badges that meet the required criteria.",
+  //   file: "",
+  // },
+  // {
+  //   title: "Craft Guides",
+  //   description:
+  //     "Easy-to-follow craft activities with pictures, instructions, and materials lists.",
+  //   file: "",
+  // },
+  // {
+  //   title: "Themed Meetings",
+  //   description: "Ideas for special event nights and pack holidays.",
+  //   file: "",
+  // },
 ];
 
 const Resources = () => {
