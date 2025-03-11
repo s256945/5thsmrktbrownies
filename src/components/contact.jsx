@@ -72,6 +72,7 @@ const Contact = () => {
             <Label htmlFor="name">Your Name *</Label>
             <Input
               id="name"
+              name="name"
               type="text"
               placeholder="👤 Enter your name"
               required
@@ -79,6 +80,7 @@ const Contact = () => {
             <Label htmlFor="email">Your Email *</Label>
             <Input
               id="email"
+              name="email"
               type="email"
               placeholder="📧 Enter your email"
               required
@@ -91,8 +93,20 @@ const Contact = () => {
             <Label htmlFor="message">Your Message *</Label>
             <TextArea
               id="message"
+              name="message"
               placeholder="💬 Type your message here"
               required
+            />
+            <p style={{ fontSize: "0.8rem", marginTop: "10px", color: "#555" }}>
+              🔒 We’ll only use your information to respond to your enquiry.
+            </p>
+            <input
+              type="text"
+              name="honeypot"
+              style={{ display: "none" }}
+              tabIndex="-1"
+              autoComplete="off"
+              aria-hidden="true"
             />
             <Button type="submit">Send Message</Button>
           </Form>

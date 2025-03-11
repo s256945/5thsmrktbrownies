@@ -39,7 +39,9 @@ const NavBar = styled.nav`
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   a:hover,
@@ -73,10 +75,11 @@ const Header = () => {
             <li key={item.to}>
               <NavLink
                 to={item.to}
-                activeClassName="active"
+                className={({ isActive }) => (isActive ? "active" : "")}
                 aria-current={
                   window.location.pathname === item.to ? "page" : undefined
                 }
+                aria-label={`Go to ${item.label.replace(/[^a-zA-Z ]/g, "").trim()} page`}
               >
                 {item.label}
               </NavLink>
