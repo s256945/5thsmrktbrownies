@@ -16,9 +16,17 @@ import {
 } from "./StyledComponents.js";
 
 const ActivitiesOverview = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 20px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const ErrorMessage = styled.p`

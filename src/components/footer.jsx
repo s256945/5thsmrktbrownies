@@ -4,14 +4,18 @@ import Logo from "../../public/assets/images/logo.png";
 
 const FooterContainer = styled.footer`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-color: #ffc80a;
-  padding: 10px 20px;
   text-align: center;
+  padding: 20px;
+  background-color: #ffc80a;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-  flex-wrap: wrap;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
 `;
 
 const FooterText = styled.p`
@@ -50,14 +54,22 @@ const Footer = () => {
       <a href="/" aria-label="Go to homepage">
         <LogoImage src={Logo} alt="5th Stowmarket Brownies Logo" />
       </a>
-      <FooterText>
-        © 2025 5th Stowmarket Brownies. Website created by Amy Jordan.
-        <br />
+      <FooterText as="div">
+        <p>© 2025 5th Stowmarket Brownies. Website created by Amy Jordan.</p>
         <FooterLinks>
           <a href="/join">Join</a>
           <a href="/programme">Programme</a>
           <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
+          <small>
+            <a
+              href="https://www.girlguiding.org.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Girlguiding UK
+            </a>
+          </small>
         </FooterLinks>
       </FooterText>
     </FooterContainer>

@@ -14,10 +14,17 @@ import {
 } from "./StyledComponents";
 
 const ActivitiesOverview = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 20px;
-  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const TestimonialsBlockquote = styled.blockquote`
