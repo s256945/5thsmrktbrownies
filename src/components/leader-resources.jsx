@@ -37,6 +37,11 @@ const resources = [
       "A simple template to organise weekly meetings, including date, activity, and materials needed.",
     file: "/assets/files/term-plan.pdf",
   },
+  {
+    title: "VE Day 80th Anniversary Activities",
+    description: "Download instructions for engaging crafts and games to commemorate the 80th anniversary of VE Day with your unit.",
+    file: "/assets/files/ve-day.pdf",
+  }
   // {
   //   title: "Badge Tracker",
   //   description:
