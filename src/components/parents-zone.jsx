@@ -68,15 +68,23 @@ const Parents = () => {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const correctPassword = "Stowmarket5th#";
-
-  const handlePasswordSubmit = (e) => {
+  const handlePasswordSubmit = async (e) => {
     e.preventDefault();
+
     if (!password) {
       setError("Please enter a password.");
       return;
     }
-    if (password === correctPassword) {
+
+    const response = await fetch("/api/check-password", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    });
+
+    const result = await response.json();
+
+    if (result.valid) {
       setIsAuthenticated(true);
       setError("");
     } else {
@@ -111,14 +119,14 @@ const Parents = () => {
       description:
         "Browse previous term plans to see what activities we've been up to.",
       files: [
-        {
-          name: "Spring 2025 Plan",
-          url: "/assets/files/spring-2025.pdf",
-        },
-        {
-          name: "Summer 2025 Plan",
-          url: "/assets/files/summer-2025.pdf",
-        },
+        // {
+        //   name: "Spring 2025 Plan",
+        //   url: "/assets/files/spring-2025.pdf",
+        // },
+        // {
+        //   name: "Summer 2025 Plan",
+        //   url: "/assets/files/summer-2025.pdf",
+        // },
       ],
     },
     {
