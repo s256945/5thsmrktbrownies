@@ -44,7 +44,7 @@ const InputWrapper = styled.div`
 
 const StyledInput = styled(Input)`
   width: 100%;
-  padding-right: 35px; /* Space for the button */
+  padding-right: 35px;
 `;
 
 const ToggleButton = styled.button`
@@ -84,6 +84,56 @@ const Parents = () => {
     }
   };
 
+  const resources = [
+    {
+      title: "📖 New Starter Info",
+      description:
+        "All the key information you received when your Brownie joined, available to download anytime.",
+      files: [
+        {
+          name: "New Starter Pack",
+          url: "/assets/files/new-starter-forms.pdf",
+        },
+      ],
+    },
+    {
+      title: "⬆️ 9 Year olds letter",
+      description: "What you need to know now your Brownie is 9 years old.",
+      files: [
+        {
+          name: "9 Year old letter",
+          url: "/assets/files/new-starter-forms.pdf",
+        },
+      ],
+    },
+    {
+      title: "📅 Termly Plans",
+      description:
+        "Browse previous term plans to see what activities we've been up to.",
+      files: [
+        {
+          name: "Spring 2025 Plan",
+          url: "/assets/files/spring-2025.pdf",
+        },
+        {
+          name: "Summer 2025 Plan",
+          url: "/assets/files/summer-2025.pdf",
+        },
+      ],
+    },
+    {
+      title: "📄 Forms & Letters",
+      description:
+        "Lost a form or need a letter again? Find and download it easily here.",
+      files: [
+        {
+          name: "Pack Holiday 2025 Form",
+          url: "/assets/files/pack-holiday-2025.docx",
+        },
+      ],
+    },
+  ];
+
   return (
     <Main>
       <WelcomeSection>
@@ -92,71 +142,89 @@ const Parents = () => {
           <p>Stay informed, stay connected!</p>
         </Overlay>
       </WelcomeSection>
-      <Section>
-        <StyledH2>Exclusively for parents and guardians</StyledH2>
-        <p>
-          To access important updates, event details, and resources, please
-          enter the password provided in your starter pack.
-        </p>
-      </Section>
-      <FormWrapper>
-        {!isAuthenticated ? (
-          <Form onSubmit={handlePasswordSubmit} className="space-y-4">
-            <StyledH2>🔒 Parents Area - Password Protected</StyledH2>
-            <InputWrapper>
-              <StyledInput
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <ToggleButton
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? "🙈" : "👁"}
-              </ToggleButton>
-            </InputWrapper>
-            <Button type="submit">Unlock Access</Button>
-            {error && <ErrorMessage role="alert">{error}</ErrorMessage>}
-          </Form>
-        ) : (
+      {!isAuthenticated ? (
+        <>
           <Section>
-            <StyledH2>🎉 Welcome to the Parents Area!</StyledH2>
+            <StyledH2>Exclusively for parents and guardians</StyledH2>
             <p>
-              You now have access to all the latest updates, event schedules,
-              and resources tailored for you. Thanks for being part of the 5th
-              Stowmarket Brownies family!
+              To access important updates, event details, and resources, please
+              enter the password provided in your starter pack.
             </p>
-            <ActivitiesOverview>
-              <FadeIn>
-                <Article>
-                  <StyledH3>📖 New Starter Info</StyledH3>
-                  <p>
-                    Revisit all the information provided when your Brownie first
-                    joined.
-                  </p>
-                </Article>
-              </FadeIn>
-              <FadeIn>
-                <Article>
-                  <StyledH3>📅 Termly Plans</StyledH3>
-                  <p>Download past termly plans.</p>
-                </Article>
-              </FadeIn>
-              <FadeIn>
-                <Article>
-                  <StyledH3>📄 Forms & Letters</StyledH3>
-                  <p>
-                    If you&apos;re missing a form or letter, you can find it
-                    here.
-                  </p>
-                </Article>
-              </FadeIn>
-            </ActivitiesOverview>
           </Section>
-        )}
-      </FormWrapper>
+          <FormWrapper>
+            <Form onSubmit={handlePasswordSubmit}>
+              <StyledH2>🔒 Parents Area - Password Protected</StyledH2>
+              <InputWrapper>
+                <StyledInput
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <ToggleButton
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "🙈" : "👁"}
+                </ToggleButton>
+              </InputWrapper>
+              <Button type="submit">Unlock Access</Button>
+              {error && <ErrorMessage role="alert">{error}</ErrorMessage>}
+            </Form>
+          </FormWrapper>
+        </>
+      ) : (
+        <Section>
+          <StyledH2>🎉 Welcome to the Parents Area!</StyledH2>
+          <p>
+            You now have access to all the latest updates, event schedules, and
+            resources tailored for you. Thanks for being part of the 5th
+            Stowmarket Brownies family!
+          </p>
+          <ActivitiesOverview>
+            {resources.map((resource, index) => (
+              <FadeIn key={index}>
+                <Article>
+                  <StyledH3>{resource.title}</StyledH3>
+                  <p>{resource.description}</p>
+                  {resource.files.length === 1 ? (
+                    <Button
+                      as="a"
+                      href={resource.files[0].url}
+                      download
+                      aria-label={`Download ${resource.files[0].name}`}
+                    >
+                      Download {resource.files[0].name}
+                    </Button>
+                  ) : (
+                    <ul
+                      style={{
+                        paddingLeft: 0,
+                        listStyle: "none",
+                        marginTop: "10px",
+                      }}
+                    >
+                      {resource.files.map((file, i) => (
+                        <li key={i}>
+                          <Button
+                            as="a"
+                            href={file.url}
+                            download
+                            aria-label={`Download ${file.name}`}
+                            style={{ display: "block", marginBottom: "6px" }}
+                          >
+                            Download {file.name}
+                          </Button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </Article>
+              </FadeIn>
+            ))}
+          </ActivitiesOverview>
+        </Section>
+      )}
     </Main>
   );
 };
