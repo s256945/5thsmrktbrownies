@@ -38,11 +38,6 @@ const Label = styled.label`
 const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-  };
-
   return (
     <Main>
       <WelcomeSection>
@@ -67,7 +62,28 @@ const Contact = () => {
             ✅ Message sent successfully!
           </p>
         ) : (
-          <Form onSubmit={handleSubmit} aria-labelledby="contact-form-title">
+          <Form
+            action="https://formspree.io/f/mzzrrozk"
+            method="POST"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target;
+              fetch("https://formspree.io/f/mzzrrozk", {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                  Accept: "application/json",
+                },
+              }).then((response) => {
+                if (response.ok) {
+                  setFormSubmitted(true);
+                  form.reset();
+                } else {
+                  alert("Form submission failed. Please try again.");
+                }
+              });
+            }}
+          >
             <StyledH2 id="contact-form-title">Send Us a Message</StyledH2>
             <Label htmlFor="name">Your Name *</Label>
             <Input
@@ -108,6 +124,7 @@ const Contact = () => {
               autoComplete="off"
               aria-hidden="true"
             />
+            <input type="hidden" name="_subject" value="📬 New message from 5th Stowmarket Brownies Website" />
             <Button type="submit">Send Message</Button>
           </Form>
         )}
