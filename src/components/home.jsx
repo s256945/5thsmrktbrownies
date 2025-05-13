@@ -70,17 +70,13 @@ const Home = () => {
       <WelcomeSection>
         <Overlay>
           <StyledH2>Welcome to our Brownies Unit!</StyledH2>
-          <p>Join us for fun, friendship, and adventure!</p>
+          <p>Brownies think big, be bold and try their best.</p>
         </Overlay>
       </WelcomeSection>
       <Section>
         <StyledH2>What do Brownies do?</StyledH2>
         <p>
-          Brownies welcomes all girls from 7 to 10 years old for nonstop fun,
-          learning, and adventure. It’s full of firsts: she might grow her first
-          plant, cook her first cake, put up (and take down) her first tent,
-          light her first fire, or go on her first fun-packed weekend away with
-          guiding friends.
+         Brownies welcomes all girls from 7 to 10 years old having nonstop fun, learning and adventure. Brownies is full of firsts: your child can explore their creative side, get out into the great outdoors, learn how to look after themselves, others and the world we live in. They might grow their first plant, cook their first cake, put up (and take down) their first tent or go on their first fun-packed weekend away with guiding friends. There's something for every girl!
         </p>
         <ActivitiesOverview>
           <FadeIn>
