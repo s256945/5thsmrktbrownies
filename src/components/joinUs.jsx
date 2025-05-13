@@ -56,9 +56,7 @@ const Join = () => {
             />
             <StyledH3>🎀 Join as a Brownie</StyledH3>
             <p>
-              Brownies is full of fun, learning, and adventure! Girls in Guiding
-              are 23% more confident and 3x more likely to contribute to their
-              community.
+              Non-stop fun, friendships and adventure! Girls aged 11-18 in guiding are, on average, 28% more confident and 15% happier than UK girls.
             </p>
             <Button
               as="a"
@@ -76,8 +74,9 @@ const Join = () => {
             <JoinImg src={Leader3} alt="A woman volunteer in a wheelchair" />
             <StyledH3>🤝 Join as a Volunteer</StyledH3>
             <p>
-              Help all girls know they can do anything by volunteering with us.
-              Make a difference and be part of the guiding community!
+              Ready to inspire girls aged 7 to 10?
+It's a world of firsts you can explore together! You’ll have the chance to develop your leadership skills and
+help girls to have lots of fun trying out new adventures
             </p>
             <Button
               as="a"
