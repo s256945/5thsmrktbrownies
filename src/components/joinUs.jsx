@@ -42,9 +42,10 @@ const Join = () => {
       <Section>
         <StyledH2>How to Join</StyledH2>
         <p>
-          Whether you want to become a Brownie or volunteer, there&apos;s a place for
-          you! When registering, select 5th Stowmarket Brownies as your first
-          choice, and your details will be directed to us via official channels.
+          Whether you want to become a Brownie or volunteer, there&apos;s a
+          place for you! When registering, select 5th Stowmarket Brownies as
+          your first choice, and your details will be directed to us via
+          official channels.
         </p>
       </Section>
       <JoinOptions>
@@ -56,7 +57,9 @@ const Join = () => {
             />
             <StyledH3>🎀 Join as a Brownie</StyledH3>
             <p>
-              Non-stop fun, friendships and adventure! Girls aged 11-18 in guiding are, on average, 28% more confident and 15% happier than UK girls.
+              Non-stop fun, friendships and adventure! Girls aged 11-18 in
+              guiding are, on average, 28% more confident and 15% happier than
+              UK girls.
             </p>
             <Button
               as="a"
@@ -74,9 +77,10 @@ const Join = () => {
             <JoinImg src={Leader3} alt="A woman volunteer in a wheelchair" />
             <StyledH3>🤝 Join as a Volunteer</StyledH3>
             <p>
-              Ready to inspire girls aged 7 to 10?
-It's a world of firsts you can explore together! You’ll have the chance to develop your leadership skills and
-help girls to have lots of fun trying out new adventures
+              Ready to inspire girls aged 7 to 10? It&apos;s a world of firsts you
+              can explore together! You’ll have the chance to develop your
+              leadership skills and help girls to have lots of fun trying out
+              new adventures
             </p>
             <Button
               as="a"

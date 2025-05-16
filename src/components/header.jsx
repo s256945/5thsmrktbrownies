@@ -60,6 +60,8 @@ const NavBar = styled.nav`
 
   li {
     position: relative;
+    display: flex;
+    align-items: center;
   }
 
   a {
@@ -83,6 +85,56 @@ const NavBar = styled.nav`
     background-color: #ef7b00;
     font-weight: bold;
   }
+
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    height: 100%;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .dropdown-toggle:hover,
+  .dropdown-toggle:focus {
+    background-color: #ef7b00;
+    color: #fff;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #603d33;
+    padding: 5px 0;
+    list-style: none;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  li:hover > .dropdown,
+  .dropdown-toggle:focus + .dropdown {
+    display: block;
+  }
+
+  .dropdown li a {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+  }
+
+  .dropdown li a:hover {
+    background-color: #ef7b00;
+  }
 `;
 
 const Header = () => {
@@ -95,6 +147,14 @@ const Header = () => {
     { to: "/programme", label: "🎉 Programme" },
     { to: "/resources", label: "🗂️ Resources" },
     { to: "/contact", label: "📬 Contact" },
+    { to: "/progress", label: "📊 Progress" },
+    {
+      label: "💛 Our Unit",
+      submenu: [
+        { to: "/about", label: "ℹ️ About the Unit" },
+        { to: "/leaders", label: "👩‍🦱 Leaders" },
+      ],
+    },
   ];
 
   return (
@@ -107,14 +167,37 @@ const Header = () => {
         <ul>
           {menuItems.map((item) => (
             <li key={item.to}>
-              <NavLink
-                to={item.to}
-                className={({ isActive }) => (isActive ? "active" : "")}
-                onClick={() => setOpen(false)}
-                aria-label={`Go to ${item.label.replace(/[^a-zA-Z ]/g, "").trim()} page`}
-              >
-                {item.label}
-              </NavLink>
+              {item.submenu ? (
+                <>
+                  <div className="dropdown-toggle" role="button" tabIndex={0}>
+                    {item.label}
+                  </div>
+                  <ul className="dropdown">
+                    {item.submenu.map((subItem) => (
+                      <li key={subItem.to}>
+                        <NavLink
+                          to={subItem.to}
+                          className={({ isActive }) =>
+                            isActive ? "active" : ""
+                          }
+                          onClick={() => setOpen(false)}
+                        >
+                          {subItem.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setOpen(false)}
+                  aria-label={`Go to ${item.label.replace(/[^a-zA-Z ]/g, "").trim()} page`}
+                >
+                  {item.label}
+                </NavLink>
+              )}
             </li>
           ))}
         </ul>
